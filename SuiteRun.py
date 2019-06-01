@@ -3,7 +3,7 @@ import sys
 import os
 
 def RunRobotFile(FileName, path):
-    os.system("Robot -d " + path + "\\"+ FileName + " " + FileName + ".robot")
+    os.system("Robot -d " + path + "\\"+ FileName + " --critical Critical -X " + FileName + ".robot")
 
 
 def main():
