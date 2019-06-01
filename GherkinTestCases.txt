@@ -1,0 +1,140 @@
+
+Feature: New Feed
+
+##################   Feed Name   ##################
+    Scenario: Navigate To "NEW FEED"
+        When the browser is on the main screen
+        And the user clicks "NEW FEED"
+        Then the browser navigates to the "new" page
+
+    Scenario: "Feed Name" Field Accepts User Input
+        When the browser is on the "new" page
+        And the user clicks on the field named "Feed Name"
+        Then the user can input a field name
+
+    Scenario: "Feed Name" Field Restricts Invalid User Input (Empty)
+        When the browser is on the "new" page
+        And the user clicks on the field named "Feed Name"
+        When the user inputs an empty string
+        And clicks the "Save" button
+        Then a message pops us stating the field is invalid
+
+    Scenario: "Feed Name" Field Restricts Invalid User Input (Large)
+        When the browser is on the "new" page
+        And the user clicks on the field named "Feed Name"
+        When the user inputs a string that is too large
+        And clicks the "Save" button
+        Then a message pops us stating the field is invalid
+
+
+##################   Switch Tab   ##################
+    Scenario: "Feed Info" And "Agency Info" Can Be Toggled Between
+        When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
+        And the user clicks on the "Agency Info" tab
+        Then the browser loads the "Agency Info" tab
+        And unloads the "Feed Info" tab
+
+    Scenario: "Agency Info" And "Feed Info" Can Be Toggled Between
+        When the browser is on the "new" page
+        And the broswer is on the "Agency Info" tab
+        And the user clicks on the "Feed Info" tab
+        Then the browser loads the "Feed Info" tab
+        And unloads the "Agency Info" tab
+
+
+##################   Publisher  ##################
+    Scenario: "Publisher" Field Accepts User Input
+        When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
+        Then user can input a value into the "Publisher" field
+
+    Scenario: "Publisher" Field Retains Value When Switching Tabs
+        When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
+        And the user has a value into the "Publisher" field
+        When the user clicks on the "Agency Info" tab
+        And then user clicks on the "Feed Info" tab
+        Then the "Publisher" field retained it's value
+
+    Scenario: "Publisher" Field Restricts Invalid User Input (Empty)
+        When the browser is on the "new" page
+        And the user clicks on the field named "Publisher"
+        When the user inputs an empty string
+        And clicks the "Save" button
+        Then a message pops us stating the field is invalid
+
+    Scenario: "Publisher" Field Restricts Invalid User Input (Large)
+        When the browser is on the "new" page
+        And the user clicks on the field named "Publisher"
+        When the user inputs a string that is too large
+        And clicks the "Save" button
+        Then a message pops us stating the field is invalid
+
+
+##################   URL  ##################
+    Scenario: "URL" Field Accepts User Input
+        When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
+        Then user can input a value into the "URL" field
+
+    Scenario: "URL" Field Retains Value When Switching Tabs
+        When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
+        And the user has a value into the "URL" field
+        When the user clicks on the "Agency Info" tab
+        And then user clicks on the "Feed Info" tab
+        Then the "URL" field retained it's value
+
+    Scenario: "URL" Field Restricts Invalid User Input (Empty)
+        When the browser is on the "new" page
+        And the user clicks on the field named "URL"
+        When the user inputs an empty string
+        And clicks the "Save" button
+        Then a message pops us stating the field is invalid
+
+    Scenario: "URL" Field Restricts Invalid User Input (Large)
+        When the browser is on the "new" page
+        And the user clicks on the field named "URL"
+        When the user inputs a string that is too large
+        And clicks the "Save" button
+        Then a message pops us stating the field is invalid
+
+
+##################   Language  ##################
+
+
+##################   Start Date  ##################
+
+
+##################   End Date  ##################
+
+
+##################   Version  ##################
+    Scenario: "Version" Field Accepts User Input
+        When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
+        Then user can input a value into the "Version" field
+
+    Scenario: "Version" Field Retains Value When Switching Tabs
+        When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
+        And the user has a value into the "Version" field
+        When the user clicks on the "Agency Info" tab
+        And then user clicks on the "Feed Info" tab
+        Then the "Version" field retained it's value
+
+    Scenario: "Version" Field Restricts Invalid User Input (Empty)
+        When the browser is on the "new" page
+        And the user clicks on the field named "Version"
+        When the user inputs an empty string
+        And clicks the "Save" button
+        Then a message pops us stating the field is invalid
+
+    Scenario: "Version" Field Restricts Invalid User Input (Large)
+        When the browser is on the "new" page
+        And the user clicks on the field named "Version"
+        When the user inputs a string that is too large
+        And clicks the "Save" button
+        Then a message pops us stating the field is invalid
+
