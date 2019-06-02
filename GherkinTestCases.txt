@@ -1,3 +1,11 @@
+Feature: Log In
+    Scenario: Log In with valid username
+        When the browser is on the "Log in" screen
+        And the user inputs the correct username
+        And the user inputs the correct password
+        And presses the log in button
+        Then the user is direct to the Welcome Page "Architect"
+
 
 Feature: New Feed
 
@@ -52,13 +60,14 @@ Feature: New Feed
     Scenario: "Publisher" Field Retains Value When Switching Tabs
         When the browser is on the "new" page
         And the broswer is on the "Feed Info" tab
-        And the user has a value into the "Publisher" field
+        and the user has a value in the "Publisher" field
         When the user clicks on the "Agency Info" tab
         And then user clicks on the "Feed Info" tab
         Then the "Publisher" field retained it's value
 
     Scenario: "Publisher" Field Restricts Invalid User Input (Empty)
         When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
         And the user clicks on the field named "Publisher"
         When the user inputs an empty string
         And clicks the "Save" button
@@ -66,6 +75,7 @@ Feature: New Feed
 
     Scenario: "Publisher" Field Restricts Invalid User Input (Large)
         When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
         And the user clicks on the field named "Publisher"
         When the user inputs a string that is too large
         And clicks the "Save" button
@@ -81,13 +91,14 @@ Feature: New Feed
     Scenario: "URL" Field Retains Value When Switching Tabs
         When the browser is on the "new" page
         And the broswer is on the "Feed Info" tab
-        And the user has a value into the "URL" field
+        and the user has a value in the "URL" field
         When the user clicks on the "Agency Info" tab
         And then user clicks on the "Feed Info" tab
         Then the "URL" field retained it's value
 
     Scenario: "URL" Field Restricts Invalid User Input (Empty)
         When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
         And the user clicks on the field named "URL"
         When the user inputs an empty string
         And clicks the "Save" button
@@ -95,6 +106,7 @@ Feature: New Feed
 
     Scenario: "URL" Field Restricts Invalid User Input (Large)
         When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
         And the user clicks on the field named "URL"
         When the user inputs a string that is too large
         And clicks the "Save" button
@@ -119,13 +131,14 @@ Feature: New Feed
     Scenario: "Version" Field Retains Value When Switching Tabs
         When the browser is on the "new" page
         And the broswer is on the "Feed Info" tab
-        And the user has a value into the "Version" field
+        and the user has a value in the "Version" field
         When the user clicks on the "Agency Info" tab
         And then user clicks on the "Feed Info" tab
         Then the "Version" field retained it's value
 
     Scenario: "Version" Field Restricts Invalid User Input (Empty)
         When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
         And the user clicks on the field named "Version"
         When the user inputs an empty string
         And clicks the "Save" button
@@ -133,6 +146,7 @@ Feature: New Feed
 
     Scenario: "Version" Field Restricts Invalid User Input (Large)
         When the browser is on the "new" page
+        And the broswer is on the "Feed Info" tab
         And the user clicks on the field named "Version"
         When the user inputs a string that is too large
         And clicks the "Save" button
