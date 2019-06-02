@@ -65,3 +65,6 @@ To run the code, all you need to do is run the script "SuiteRun.py" with no argu
 
     python .\SuiteRun.py
 
+Once started, it will generate a unique folder name to store the results into, named Results\Run_(int). These can be used to archive old runs, or view long term system stability. Each suite creates a custom subdirectory to store its results.
+
+To view the results of the run, load "Results\Run_(int)\NewFeed\report.html" in your browswer. A more detailed report can be viewed in the same directory in log.html. I have included one sample run of the automation, for reference.
