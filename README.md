@@ -1,9 +1,9 @@
 # Architect
 Coding Challenge for Architect
 
-Code was developed and tested on windows and chrome. Other platforms and browsers are supported, but are not 
+Code was developed and tested on Windows and Chrome. Other platforms and browsers are supported, but were not tested.
 
-# Instalation
+# Installation
 Use the following steps to install the necessary software.
 1. Install python 2.7 (32 Bit)
     https://www.python.org/ftp/python/2.7.16/python-2.7.16.msi
