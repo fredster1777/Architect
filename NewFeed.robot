@@ -228,7 +228,7 @@ Navigate To "NEW FEED"
 
 "URL" Field Restricts Invalid User Input (Large)
     [Tags]  URL         Large
-    [Teardown]          Clear Field Of Characters with data-id  field-publisher_name
+    [Teardown]          Clear Field Of Characters with data-id  field-publisher_url
     #When the browser is on the "new" page
     Title Should Be     ${WELCOMEPAGE}
     Data-id should be visible           field-name
